@@ -20,10 +20,6 @@ jobs:
       group: ${{ github.workflow }}-${{ github.event.number || github.sha }}
       cancel-in-progress: true
 
-    strategy:
-      matrix:
-        node_version: [16, 18]
-
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -36,7 +32,7 @@ jobs:
       - name: Set node version to ${{ matrix.node_version }}
         uses: actions/setup-node@v3
         with:
-          node-version: ${{ matrix.node_version }}
+          node-version: 16
           cache: pnpm
 
       - name: Install deps
