@@ -1,85 +1,20 @@
-# Markdown Extension Examples
+# PostgreSQL
 
-This page demonstrates some of the built-in markdown extensions provided by VitePress.
+## Creating PostgreSQL Container
 
-## Syntax Highlighting
+**Syntax**
 
-VitePress provides Syntax Highlighting powered by [Shiki](https://github.com/shikijs/shiki), with additional features like line-highlighting:
-
-**Input**
-
-````
-```js{4}
-export default {
-  data () {
-    return {
-      msg: 'Highlighted!'
-    }
-  }
-}
-```
-````
-
-**Output**
-
-```js{4}
-export default {
-  data () {
-    return {
-      msg: 'Highlighted!'
-    }
-  }
-}
+```bash
+podman run --name [NAME] -p [INTERNAL_PORT]:[EXTERNAL_PORT] -e POSTGRES_DB=[DATABASE_NAME] -e POSTGRES_PASSWORD=[DATABASE_PASSWORD] -e POSTGRES_USER=[DATABASE_USER] -d postgres:[IMAGE_VERSION_OR_DISTRO]
 ```
 
-## Custom Containers
 
-**Input**
+**Example**
 
-```md
-::: info
-This is an info box.
-:::
-
-::: tip
-This is a tip.
-:::
-
-::: warning
-This is a warning.
-:::
-
-::: danger
-This is a dangerous warning.
-:::
-
-::: details
-This is a details block.
-:::
+```bash
+podman run --name postgres -p 5432:5432 -e POSTGRES_DB=mydb -e POSTGRES_PASSWORD=mypw -e POSTGRES_USER=myuser -d postgres:15-bullseye
 ```
-
-**Output**
-
-::: info
-This is an info box.
-:::
-
-::: tip
-This is a tip.
-:::
-
-::: warning
-This is a warning.
-:::
-
-::: danger
-This is a dangerous warning.
-:::
-
-::: details
-This is a details block.
-:::
 
 ## More
 
-Check out the documentation for the [full list of markdown extensions](https://vitepress.dev/guide/markdown).
+Check out the Docker documentation for [this image](https://hub.docker.com/_/postgres).

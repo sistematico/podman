@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "docs:dev": "vitepress dev docs",
+    "docs:dev": "NODE_ENV=development vitepress dev docs",
     "docs:build": "vitepress build docs",
     "docs:preview": "vitepress preview docs"
   },
@@ -13,7 +13,11 @@
   "author": "Lucas Saliés Brum",
   "license": "MIT",
   "devDependencies": {
-    "vitepress": "1.0.0-alpha.63"
+    "@types/node": "^18.15.10",
+    "flexsearch": "^0.7.31",
+    "markdown-it": "^13.0.1",
+    "vitepress": "1.0.0-alpha.63",
+    "vitepress-plugin-search": "1.0.4-alpha.19"
   },
   "pnpm": {
     "peerDependencyRules": {
