@@ -14,7 +14,7 @@ podman run --name [NAME] -p [EXTERNAL_PORT]:[INTERNAL_PORT] -v [EXTERNAL_VOLUME]
 podman run --name nginx -p 80:80 -v $HOME/htdocs:/app -d nginx
 ```
 
-## Attach PostgreSQL container to a pod
+## Attach Nginx container to a pod
 
 ```bash
 podman run --name nginx --pod mypod -p 80:80 -v $HOME/htdocs:/app -d nginx
