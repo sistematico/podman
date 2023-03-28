@@ -13,20 +13,29 @@ import { defineConfig } from 'vitepress'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: 'Podman Recipes',
-  description: 'Podman recipes, cheatsheets & examples',
+  description: 'Podman recipes, howtos & cheatsheets',
   base: process.env.NODE_ENV === 'development' ? '' : '/podman/',
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Recipes', link: '/recipes/' }
+      { text: 'CheatSheet', link: '/cheatsheet' },
+      { text: 'Recipes', link: '/recipes/' },
+      { text: 'Howtos', link: '/howtos/' },
+      { text: 'Resources', link: '/resources' }
     ],
 
     sidebar: [
-      {
-        text: 'Recipes',
-        items: [{ text: 'PostgreSQL', link: '/recipes/postgresql' }]
-      }
+      { text: 'CheatSheet', items: [
+        { text: 'Pods', link: '/cheatsheet#pods' },
+        { text: 'Containers', link: '/cheatsheet#containers' }
+      ]},
+      { text: 'Recipes', items: [
+        { text: 'Nginx', link: '/recipes/nginx' },
+        { text: 'PostgreSQL', link: '/recipes/postgresql' }
+      ]},
+      { text: 'Howtos', items: [{ text: 'Running Pod as Service', link: '/howtos/pod-as-systemd-service' }]},
+      { text: 'More', items: [{ text: 'Resources', link: '/resources' }]}
     ],
 
     footer: {
@@ -35,7 +44,7 @@ export default defineConfig({
     },
 
     socialLinks: [{ icon: 'github', link: 'https://github.com/sistematico/podman' }]
-  },
+  }
   // vite: {
   //   plugins: [SearchPlugin(options)]
   // }

@@ -1,8 +1,10 @@
 # Recipes
 
-[[toc]]
+## [Nginx](nginx)
 
-### [PostgreSQL](postgresql.md)
+Simple Nginx recipe using Podman.
+
+## [PostgreSQL](postgresql)
 
 Simple PosgreSQL recipe using Podman.
 
