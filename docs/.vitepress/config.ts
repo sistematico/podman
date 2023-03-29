@@ -21,6 +21,16 @@ export default defineConfig({
     ['meta', { property: 'og:description', content: '' }],
     ['meta', { property: 'og:image', content: 'https://sistematico.github.io/podman/img/logo.png' }]
   ],
+  locales: {
+    root: {
+      label: 'English',
+      lang: 'en'
+    },
+    pt_br: {
+      label: 'Português',
+      lang: 'pt-br'
+    }
+  },
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     logo: '/img/logo.png',
