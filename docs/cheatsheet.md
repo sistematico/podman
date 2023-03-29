@@ -31,3 +31,9 @@ podman create --name=alpine --pod=new:alpine-pod alpine ls
 ```
 
 ### Images
+
+**Create a image**
+
+```bash
+# TODO...
+```

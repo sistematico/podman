@@ -1,4 +1,4 @@
-name: Deploy to Github Pages
+name: Deploy
 on:
   workflow_dispatch: {}
   push:
@@ -39,7 +39,7 @@ jobs:
         run: pnpm install
 
       - name: Build
-        run: npm run docs:build
+        run: pnpm run docs:build
 
       - name: Configure Github Pages
         uses: actions/configure-pages@v2
