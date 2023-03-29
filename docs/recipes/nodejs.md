@@ -14,6 +14,18 @@ EXPOSE 3000
 CMD ["node", "app.js"]
 ```
 
+**Syntax**
+
+```bash
+podman build -t [name:tag] -f [DOCKERFILE]
+```
+
+Description:
+- `build` build an image from Dockerfile
+- `-t`, `--tag` name and optionally a tag in the name:tag format
+- `-f`, `--file` name of the Dockerfile (Default is PATH/Dockerfile)
+- `./Podmanfile` name of the file containg the build instructions
+
 **Build image**
 
 ```bash
@@ -25,19 +37,47 @@ podman build -t nodejs -f ./Podmanfile
 **Syntax**
 
 ```bash
-podman run --name [NAME] -p [EXTERNAL_PORT]:[INTERNAL_PORT] -v [EXTERNAL_VOLUME]:[INTERNAL_VOLUME] -d [CONTAINER_NAME]
+podman run --name [CONTAINER_NAME] -p [EXTERNAL_PORT]:[INTERNAL_PORT] -v [EXTERNAL_VOLUME]:[INTERNAL_VOLUME] [-d|-it] [CONTAINER_IMAGE]
 ```
+
+Description:
+- `run` run a container
+- `--name` assign a name to the container
+- `-p`, `--expose` expose a port or a range of ports
+- `-v`, `--volume` bind mount a volume(`.` or `$(pwd)` is current path)
+- `-d`, `--detach` run container in background and print container ID
+- `-i`, `--interactive` keep STDIN open even if not attached
+- `-t`, `--tty` allocate a pseudo-TTY
 
 **Example**
 
 ```bash
-podman run --name node -p 3000:3000 -v $HOME/nodejs-app:/app -d node
+podman run --name nodejs_container -it -p 3000:3000 -v .:/app -d nodejs_image
+```
+
+## Attach to container
+
+**Syntax**
+
+```bash
+podman exec -it [CONTAINER_NAME] [COMMAND]
+```
+
+Description:
+- `exec` execute a command in a running container
+- `-i`, `--interactive` keep STDIN open even if not attached
+- `-t`, `--tty` allocate a pseudo-TTY
+
+**Example**
+
+```bash
+podman exec -it nodejs_container bash
 ```
 
 ## Attach Node.js container to a pod
 
 ```bash
-podman run --name node --pod mypod -p 80:80 -v $HOME/htdocs:/app -d node
+podman run --name nodejs_container --pod mypod -p 80:80 -v .:/app -d nodejs_image
 ```
 
 ## More information

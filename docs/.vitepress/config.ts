@@ -36,13 +36,15 @@ export default defineConfig({
         text: 'CheatSheet',
         items: [
           { text: 'Pods', link: '/cheatsheet#pods' },
-          { text: 'Containers', link: '/cheatsheet#containers' }
+          { text: 'Containers', link: '/cheatsheet#containers' },
+          { text: 'Images', link: '/cheatsheet#images' }
         ]
       },
       {
         text: 'Recipes',
         items: [
           { text: 'Nginx', link: '/recipes/nginx' },
+          { text: 'Node.js', link: '/recipes/nodejs' },
           { text: 'PostgreSQL', link: '/recipes/postgresql' }
         ]
       },
