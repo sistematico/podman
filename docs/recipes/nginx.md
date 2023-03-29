@@ -23,4 +23,4 @@ podman run --name nginx --pod mypod -p 80:80 -v $HOME/htdocs:/app -d nginx
 ## More information
 
 - [Podman run docs](https://docs.podman.io/en/latest/markdown/podman-run.1.html)
-- [DockerHub PostgreSQL](https://hub.docker.com/_/nginx)
+- [DockerHub Nginx](https://hub.docker.com/_/nginx)

@@ -6,6 +6,9 @@ hero:
   name: "Podman Recipes"
   text: "Recipes, Howtos & CheatSheet"
   # tagline: 
+  image:
+    src: /img/podman.svg
+    alt: Podman
   actions:
     - theme: brand
       text: CheatSheet
@@ -31,4 +34,3 @@ hero:
 #     details: Learn seeing other configs from users
 #     link: /recipes/
 ---
-

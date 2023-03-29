@@ -10,7 +10,7 @@ Podman cheatsheet.
 podman pod create --name mypod --share ipc,uts
 ```
 
-## Container
+## Containers
 
 **Create a container**
 
@@ -29,3 +29,5 @@ podman create --name=alpine --pod=mypod alpine ls
 ```bash
 podman create --name=alpine --pod=new:alpine-pod alpine ls
 ```
+
+### Images
