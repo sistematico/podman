@@ -1,6 +1,7 @@
 export const enConfig: Object = {
+  title: 'Podman Recipes',
+  description: 'Podman recipes, howtos & cheatsheets',
   themeConfig: {
-    // https://vitepress.dev/reference/default-theme-config
     logo: '/img/logo.png',
     nav: [
       { text: 'Home', link: '/' },

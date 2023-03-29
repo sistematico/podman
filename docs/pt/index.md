@@ -12,11 +12,11 @@ hero:
   actions:
     - theme: brand
       text: CheatSheet
-      link: /pt_br/cheatsheet
+      link: /pt/cheatsheet
     - theme: alt
       text: Tudoriais
-      link: /pt_br/tutoriais/
+      link: /pt/tutoriais/
     - theme: alt
       text: Howtos
-      link: /pt_br/howtos/
+      link: /pt/howtos/
 ---

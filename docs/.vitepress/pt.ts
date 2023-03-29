@@ -1,4 +1,6 @@
 export const ptConfig: Object = {
+  title: 'Guia do Podman',
+  description: 'Podman recipes, howtos & cheatsheets',
   themeConfig: {
     logo: '/img/logo.png',
     nav: [

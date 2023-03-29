@@ -4,8 +4,6 @@ import { ptConfig } from './pt'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: 'Podman Recipes',
-  description: 'Podman recipes, howtos & cheatsheets',
   base: process.env.NODE_ENV === 'development' ? '' : '/podman/',
   head: [
     ['link', { rel: 'apple-touch-icon', sizes: '180x180', href: '/assets/favicons/apple-touch-icon.png' }],
