@@ -5,9 +5,10 @@ export const enConfig: Object = {
     logo: '/img/logo.png',
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'CheatSheet', link: '/cheatsheet' },
+      { text: 'CheatSheets', link: '/cheatsheet' },
       { text: 'Recipes', link: '/recipes/' },
       { text: 'Howtos', link: '/howtos/' },
+      { text: 'Tips & Tricks', link: '/tips/' },
       { text: 'Resources', link: '/resources' }
     ],
     sidebar: [
@@ -32,6 +33,12 @@ export const enConfig: Object = {
         items: [
           { text: 'Running Pod as Service', link: '/howtos/pod-as-systemd-service' },
           { text: 'Running Container as Service', link: '/howtos/container-as-systemd-service' }
+        ]
+      },
+      {
+        text: 'Tips & Tricks',
+        items: [
+          { text: 'Using DockerHub', link: '/tips/using-dockerhub' }
         ]
       },
       { text: 'More', items: [{ text: 'Resources', link: '/resources' }] }

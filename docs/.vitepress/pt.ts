@@ -5,14 +5,15 @@ export const ptConfig: Object = {
     logo: '/img/logo.png',
     nav: [
       { text: 'Início', link: '/pt/' },
-      { text: 'Dicas', link: '/pt/cheatsheet' },
+      { text: 'CheatSheets', link: '/pt/cheatsheet' },
       { text: 'Tutoriais', link: '/pt/tutoriais/' },
       { text: 'Howtos', link: '/pt/howtos/' },
+      { text: 'Dicas & Truques', link: '/pt/dicas/' },
       { text: 'Recursos', link: '/pt/resources' }
     ],
     sidebar: [
       {
-        text: 'Dicas',
+        text: 'CheatSheets',
         items: [
           { text: 'Pods', link: '/pt/cheatsheet#pods' },
           { text: 'Containers', link: '/pt/cheatsheet#containers' },
@@ -32,6 +33,12 @@ export const ptConfig: Object = {
         items: [
           { text: 'Running Pod as Service', link: '/pt/howtos/pod-as-systemd-service' },
           { text: 'Running Container as Service', link: '/pt/howtos/container-as-systemd-service' }
+        ]
+      },
+      {
+        text: 'Dicas e Truques',
+        items: [
+          { text: 'Usando DockerHub', link: '/pt/dicas/usando-o-dockerhub' }
         ]
       },
       { text: 'Mais', items: [{ text: 'Recursos', link: '/pt/resources' }] }
