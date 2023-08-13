@@ -27,12 +27,12 @@ jobs:
       - name: Install pnpm
         uses: pnpm/action-setup@v2
         with:
-          version: 7.30
+          version: 8
 
       - name: Set node version to ${{ matrix.node_version }}
         uses: actions/setup-node@v3
         with:
-          node-version: 16
+          node-version: 18
           cache: pnpm
 
       - name: Install deps
@@ -42,13 +42,13 @@ jobs:
         run: pnpm run docs:build
 
       - name: Configure Github Pages
-        uses: actions/configure-pages@v2
+        uses: actions/configure-pages@v3
 
       - name: Upload Artifacts
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v2
         with:
           path: docs/.vitepress/dist
 
       - name: Deploy
         id: deployment
-        uses: actions/deploy-pages@v1
+        uses: actions/deploy-pages@v2
