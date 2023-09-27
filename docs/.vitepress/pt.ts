@@ -17,7 +17,8 @@ export const ptConfig: Object = {
         items: [
           { text: 'Pods', link: '/pt/cheatsheet#pods' },
           { text: 'Containers', link: '/pt/cheatsheet#containers' },
-          { text: 'Images', link: '/pt/cheatsheet#images' }
+          { text: 'Imagens', link: '/pt/cheatsheet#images' },
+          { text: 'Compose', link: '/pt/cheatsheet#compose' }
         ]
       },
       {

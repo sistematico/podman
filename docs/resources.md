@@ -6,6 +6,11 @@ Useful resources, videos & links.
 
 - https://docs.podman.io/en/latest/
 
+## Resources
+
+- [Compose Spec](https://compose-spec.io/)
+- [Awesome Compose](https://github.com/docker/awesome-compose)
+
 ## Videos
 
 - https://www.youtube.com/watch?v=bJDI_QuXeCE

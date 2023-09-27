@@ -17,7 +17,8 @@ export const enConfig: Object = {
         items: [
           { text: 'Pods', link: '/cheatsheet#pods' },
           { text: 'Containers', link: '/cheatsheet#containers' },
-          { text: 'Images', link: '/cheatsheet#images' }
+          { text: 'Images', link: '/cheatsheet#images' },
+          { text: 'Compose', link: '/cheatsheet#compose' }
         ]
       },
       {
